@@ -1,0 +1,212 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+  background-size: cover;
+    
+    font-family: 'Orbitron', sans-serif;
+  
+
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35rem;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+}
+.logo{
+    color: #80eef6; /* your glow color */
+    text-shadow:
+      0 0 5px #0011ff,
+      0 0 10px #6f00ff,
+      0 0 20px #000dff,
+      0 0 40px #e600ff,
+      0 0 80px #0000ff;
+    margin: 20px;
+    font-size: 50px;
+    font-weight: 100;
+    
+}
+.navbar{
+font-weight: 100;
+margin: 20px;
+}
+.navbar a {
+    text-decoration: none;
+    padding: 20px;
+   
+  }
+
+  .aurora {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at 30% 30%, #3300ffad, transparent 60%),
+                radial-gradient(circle at 70% 70%, #9d00ff84, transparent 60%),
+                radial-gradient(circle at 50% 50%, #00ffcc91, transparent 60%);
+    animation: auroraMove 15s ease-in-out infinite alternate;
+    z-index: -2;
+    filter: blur(100px);
+  }
+  
+  @keyframes auroraMove {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(50px, -30px);
+    }
+  }
+
+.nav{
+    transition: transform 0.3s ease;
+   
+  
+  
+}
+.nav:hover{
+color: black;
+  }
+
+.tagline{
+    font-size: 56px;
+
+}
+
+.sub{
+    color: beige;
+  
+}
+  .buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  justify-content: center;
+  }
+.vetra-button {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    padding: 12px 28px;
+    margin: 10px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #867efa, #66ecf1);
+    color: #0a0f1f;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow:
+      0 0 10px rgba(126, 232, 250, 0.6),
+      0 0 20px rgba(126, 232, 250, 0.4),
+      inset 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .vetra-button:hover {
+    transform: scale(1.08);
+    box-shadow:
+      0 0 25px rgb(126, 142, 250),
+      0 0 45px rgba(126, 232, 250, 0.8),
+      inset 0 0 20px rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, #66d3f1, #6eacf8);
+  }
+  
+  .vetra-button.outline {
+    background: transparent;
+    color: #7ee8fa;
+    border: 2px solid #7ee8fa;
+    box-shadow: 0 0 10px #7ee8fa44, 0 0 20px #7ee8fa22 inset;
+  }
+  
+  .vetra-button.outline:hover {
+    background: #7ee8fa11;
+    color: #ffffff;
+    box-shadow:
+      0 0 25px rgba(126, 232, 250, 0.8),
+      inset 0 0 20px rgba(126, 232, 250, 0.2);
+  }
+
+
+  .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  min-height: 80vh; /* makes sure it's vertically centered */
+  text-align: center;
+  gap: 20px;
+  }
+ 
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 20px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    .nav-links li a {
+      font-size: 16px;
+    }
+  
+    .logo {
+      font-size: 24px;
+    }
+  }.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #36296b;
+    font-size: 16px;
+  }
+  
+  /* Hamburger menu (hidden on desktop) */
+  .menu-icon {
+    display: none;
+    font-size: 28px;
+    color: #11174a;
+    cursor: pointer;
+  }
+  
+  /* 🔽 Media Query for Mobile Screens */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 40px;
+      background-color: #101341;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  }
